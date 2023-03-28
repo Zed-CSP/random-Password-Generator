@@ -14,4 +14,15 @@ function generatePassword() {
     // isNaN used to check (edge case) if input is a number
     console.log(passwordLength);
 
+  while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+    passwordLength = parseInt(prompt("Invalid input. Please enter password length (8-128 characters):"));
+    }
+   
+    // Prompt user for character types
+    let includeLowercase = confirm("Click OK to confirm including lowercase characters");
+    let includeUppercase = confirm("Click OK to confirm including uppercase characters");
+    let includeNumbers = confirm("Click OK to confirm including numeric characters");
+    let includeSpecial = confirm("Click OK to confirm including special characters");
+
+    
 }
